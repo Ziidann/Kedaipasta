@@ -1,0 +1,383 @@
+:root {
+  --primary: #f3c623;
+  --bg: #243642;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg);
+  color: #fff;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: var(--bg);
+  border-bottom: 1px solid var(--primary);
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+
+.navbar .navbar-logo {
+  font-size: 2rem;
+  font-weight: 700;
+  font-style: italic;
+  color: #fff;
+}
+
+.navbar .navbar-logo span {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a {
+  color: #fff;
+  display: inline-block;
+  font-size: 1.4rem;
+  margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a::after {
+  content: '';
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--primary);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(1);
+}
+
+.navbar .navbar-extra a {
+  color: #fff;
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: var(--primary);
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+/* Hero Section */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url(../img/heropasta.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  bottom: 0;
+  background: linear-gradient(0deg, rgba(36, 54, 66, 1) 8%, rgba(255, 255, 255, 0) 40%);
+}
+
+.hero .content {
+  width: 60rem;
+  padding: 1.4rem 7%;
+}
+.hero .content h1 {
+  font-size: 5rem;
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(36, 54, 66, 0.5);
+  line-height: 5rem;
+}
+
+.hero .content h1 span {
+  color: var(--primary);
+}
+
+.hero .content p {
+  font-size: 1.6rem;
+  margin-top: 1rem;
+  color: #fff;
+  line-height: 1.6rem;
+  font-weight: 100;
+  text-shadow: 1px 1px 3px rgba(36, 54, 66, 0.5);
+  mix-blend-mode: difference;
+}
+
+.hero .content .cta {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.4rem;
+  color: #fff;
+  background-color: var(--primary);
+  border-radius: 10px;
+  box-shadow: 1px 1px 3px r;
+}
+
+/* About  */
+.about,
+.menu,
+.contact {
+  padding: 8rem 7% 1.4rem;
+}
+
+.about h2,
+.menu h2,
+.contact h2 {
+  color: #fff;
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 3rem;
+}
+
+.about h2 span,
+.menu h2 span,
+.contact h2 span {
+  color: var(--primary);
+}
+
+.about .tujuan {
+  display: flex;
+  gap: 3rem;
+  color: #fff;
+}
+
+.about .tujuan h3 {
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.about .tujuan p {
+  text-align: justify;
+  font-size: 1.4rem;
+  font-weight: 100;
+}
+
+.menu h2,
+.contact h2 {
+  margin-bottom: 0.5rem;
+}
+
+.menu p,
+.contact p {
+  color: #fff;
+  font-weight: 100;
+  width: 40rem;
+  text-align: center;
+  margin: auto;
+}
+
+.menu .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+  justify-content: center;
+}
+
+.menu-card {
+  text-align: center;
+  margin: 1rem;
+}
+
+.menu .row .menu-card img {
+  height: 70%;
+  width: 50%;
+  border-radius: 50%;
+}
+
+.menu .row .menu-card h4 {
+  font-size: 2rem;
+  color: #fff;
+}
+
+/* Contact */
+.contact .row {
+  display: flex;
+  margin-top: 2rem;
+  background-color: #355061;
+}
+
+.contact .row .map {
+  flex: 1 1 45rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.contact .row form {
+  flex: 1 1 45rem;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.contact .row .input-group {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  background-color: var(--bg);
+  border: 1px solid #fff;
+  padding-left: 2rem;
+}
+
+.contact .row .input-group input {
+  width: 100%;
+  padding: 2rem;
+  font-size: 1.6rem;
+  background: none;
+  color: #fff;
+}
+
+.contact .row form .btn {
+  margin-top: 3rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.6rem;
+  color: #fff;
+  background-color: var(--primary);
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.contact .row form .btn:hover {
+  color: var(--bg);
+  background-color: #fff;
+}
+
+/* Media Queries */
+
+/* Leptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* Footer */
+footer {
+  background-color: var(--primary);
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 3rem;
+}
+
+footer .sosmed a {
+  padding: 1rem;
+  color: var(--bg);
+}
+
+footer .sosmed a:hover {
+  color: #fff;
+}
+
+footer .links {
+  margin: 1rem;
+}
+
+footer .links a {
+  color: var(--bg);
+  padding: 0.7rem 1rem;
+}
+
+footer .links a:hover {
+  color: #fff;
+}
+
+footer .criedit {
+  color: var(--bg);
+  font-weight: 700;
+}
+/* Tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  #hamburger-menu {
+    display: inline-block;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: var(--primary);
+    width: 30rem;
+    height: 30rem;
+    transition: 0.3s;
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+
+  .navbar .navbar-nav a {
+    display: block;
+    margin: 1.5rem;
+    padding: 0.8rem;
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .navbar .navbar-nav a:hover {
+    color: var(--bg);
+  }
+
+  .navbar .navbar-nav a::after {
+    content: '';
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid var(--bg);
+    transform: scaleX(0);
+    transition: 0.2s linear;
+  }
+
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.5);
+  }
+
+  .about .tujuan {
+    flex-wrap: wrap;
+  }
+
+  .contact .row {
+    flex-wrap: wrap;
+  }
+
+  .contact .row .map {
+    height: 35rem;
+  }
+}
+
+/* Mobile Phone */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}
